@@ -18,7 +18,7 @@ jobs:
           root_file: cv.tex  
 
       - name: Prepare File
-        run: mv cv.pdf your-cv.pdf  
+        run: mv cv.pdf garcia-cv.pdf  
 
       - name: Push PDF to Website
         uses: dmnemec/copy_file_to_another_repo_action@main
