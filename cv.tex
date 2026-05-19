@@ -1,0 +1,86 @@
+\documentclass[margin,line,pifont,palatino,courier]{res}
+
+\usepackage{pifont}
+\usepackage[latin1] {inputenc}
+\usepackage{hyperref}
+
+
+%\topmargin .5in
+%\oddsidemargin -.5in
+%\evensidemargin -.5in
+%\textwidth= 5.0in
+ \textheight=9.8in
+%\itemsep=0in
+%\parsep=0in
+\usepackage{fancyhdr}
+%\topmargin=0in
+%\textheight=8.5in
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+%\cfoot{\thepage}
+%\lfoot{\textit{\footnotesize Research Statement}}
+%\rfoot{{\footnotesize Curriculum Vitae, Camden Bock, \thepage}}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\begin{document}
+
+\name{Michael Garcia \vspace*{.075in}}
+\title{firstlast_cv}
+\begin{resume}
+
+\section{\sc Contact Information}
+
+\vspace{.05in}
+\begin{tabular}{@{}p{2.75in}p{2in}}
+Institute for Research on Labor &  \verb+mgarcia182@berkeley.edu+ \\
+%\href{www.linkedin.com/in/michael-garcia-33b899303}{LinkedIn} \\
+ \& Employment (IRLE) & (626) 559-3032 \\
+Berkeley, CA & %(626) 559-3032 \\
+\end{tabular}
+
+\input{researchinterests}
+\input{education.tex}
+\input{edexperience.tex}
+
+\input{awards}
+%\input{researchgrants}
+%\input{pubs.tex}
+\input{wprogress}
+\input{pres.tex}
+%\input{media.tex}
+%\input{teaching.tex}
+\input{affiliations.tex}
+\input{profdev.tex}
+\input{service.tex}
+\input{languages.tex}
+\input{skills.tex}
+%\input{hobbies.tex}
+
+%\input{certs.tex}
+
+
+\hspace{1cm}
+\hspace*{\fill} \emph{Last updated: \today}
+
+
+\end{resume}
+
+\end{document}
+
