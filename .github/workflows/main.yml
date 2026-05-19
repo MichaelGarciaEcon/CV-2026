@@ -1,0 +1,33 @@
+name: Compile and Sync CV
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex  # Change this to cv.tex or your exact main filename if it is not main.tex
+
+      - name: Prepare File
+        run: mv main.pdf your-cv.pdf  # Change main.pdf to cv.pdf if your root file is different
+
+      - name: Push PDF to Website
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.WEBSITE_DEPLOY_TOKEN }}
+        with:
+          source_file: 'your-cv.pdf'
+          destination_repo: 'MichaelGarciaEcon/michaelgarciaecon.github.io'
+          destination_folder: '/'
+          user_email: 'mgarcia182@berkeley.edu'
+          user_name: 'Michael Garcia'
+          commit_message: 'Automated CV build via Overleaf Sync'
