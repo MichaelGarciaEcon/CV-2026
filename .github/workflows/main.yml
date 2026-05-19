@@ -15,10 +15,10 @@ jobs:
       - name: Compile LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: main.tex  # Change this to cv.tex or your exact main filename if it is not main.tex
+          root_file: cv.tex  
 
       - name: Prepare File
-        run: mv main.pdf your-cv.pdf  # Change main.pdf to cv.pdf if your root file is different
+        run: mv cv.pdf your-cv.pdf  
 
       - name: Push PDF to Website
         uses: dmnemec/copy_file_to_another_repo_action@main
