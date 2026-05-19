@@ -25,7 +25,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.WEBSITE_DEPLOY_TOKEN }}
         with:
-          source_file: 'your-cv.pdf'
+          source_file: 'garcia-cv.pdf'
           destination_repo: 'MichaelGarciaEcon/michaelgarciaecon.github.io'
           destination_folder: '/'
           user_email: 'mgarcia182@berkeley.edu'
